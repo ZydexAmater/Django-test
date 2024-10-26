@@ -4,10 +4,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static assets/css/main.css %}">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/png">
+    <link rel="shortcut icon" href="{% static "images/favicon.svg" type="image/png"%}">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,27 +19,27 @@
     <div class="header">
         <div class="container">
             <div class="navigation">
-                <a href="https://www.tiktok.com/@glleeb8/video/6990765453693996293?q=nigerss&t=1714915074906"><img src="assets/images/pc1.png" class="img-logo"></a>
+                <a href="https://www.tiktok.com/@glleeb8/video/6990765453693996293?q=nigerss&t=1714915074906"><img src="{% static "images/pc1.png"%}" class="img-logo"></a>
                 <a class="active" href="#">Главное</a>
                 <a href="#">Примущество</a>
                 <a href="#">Акции</a>
                 <a href="#">Вопросы и <br> ответы</a>
                 <a href="#">Наши партнеры</a>
-                <a href=""><img src="assets/images/basket.png" alt="" class="img-logo-2"></a>
+                <a href=""><img src="{% static "images/basket.png"%}" alt="" class="img-logo-2"></a>
             </div>
             <div class="head-context-slider">
-                <img src="assets/images/4060.png" alt="" class="slide">
-                <img src="assets/images/3060.png" alt="" class="slide">
-                <img src="assets/images/6750.png" alt="" class="slide">
-                <img src="assets/images/570.png" alt="" class="slide">
-                <img src="assets/images/1070.png" alt="" class="slide">
+                <img src="{% static "images/4060.png"%}" alt="" class="slide">
+                <img src="{% static "images/3060.png"%}" alt="" class="slide">
+                <img src="{% static "images/6750.png"%}" alt="" class="slide">
+                <img src="{% static "images/570.png"%}" alt="" class="slide">
+                <img src="{% static "images/1070.png"%}" alt="" class="slide">
             </div>
         </div>
         <div class="main-section">
             <div class="h1-top">ТОП НАУҚАН!</div>
             <div class="section-main-mid-1">
                 <section class="section-card-1">
-                    <h1 class="h1-title" >GTX 1080 TI</h1><img class="image-begin-1" src="assets/images/1080.png" alt=""><p class="p" >
+                    <h1 class="h1-title" >GTX 1080 TI</h1><img class="image-begin-1" src="{% static "images/1080.png"%}" alt=""><p class="p" >
                         Видеокарта Gigabyte Nvidia <br>
                         GeForce GTX 1080 Ti 11Gb Gaming <br>
                         OC(DVI+HDMI+3*DP) <br>
@@ -47,12 +47,12 @@
                     <p class="p1" style="color: black; font-weight: bold;">Цена: <s>199500</s> тг<b><sup>172300 тг</sup></b></p>
                     <p class="p1">В наличии<br>5 штук</p>
                     <div class="icons-for-card">
-                        <a href="#"><img class="heart-icon-1" src="assets/images/icons8-heart-50.png" alt=""></a>
-                        <a href="#"><img class="heart-icon-2" src="assets/images/icons8-basket-50.png" alt=""></a>
+                        <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
+                        <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
                     </div>    
                 </section>
                 <section class="section-card-2">
-                    <h1 class="h1-title" >RTX 4090</h1><img class="image-begin-1" src="assets/images/4090.png" alt=""><p class="p">
+                    <h1 class="h1-title" >RTX 4090</h1><img class="image-begin-1" src="{% static "images/4090.png"%}" alt=""><p class="p">
                         Видеокарта GIGABYTE GeForce <br>
                         RTX 4090 GAMING OC <br>
                         [GV-N4090GAMING OC-24GD] <br>
@@ -61,12 +61,12 @@
                     
                     <p class="p1">В наличии<br>15 штук</p>
                     <div class="icons-for-card">
-                        <a href="#"><img class="heart-icon-1" src="assets/images/icons8-heart-50.png" alt=""></a>
-                        <a href="#"><img class="heart-icon-2" src="assets/images/icons8-basket-50.png" alt=""></a>
+                        <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
+                        <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
                     </div>
                 </section>
                 <section class="section-card-3">
-                    <h1 class="h1-title" >RTX 4060</h1><img class="image-begin-1" src="assets/images/4060.png" alt=""><p class="p">
+                    <h1 class="h1-title" >RTX 4060</h1><img class="image-begin-1" src="{% static "images/4060.png"%}" alt=""><p class="p">
                         Видеокарта MSI GeForce RTX 4060<br>
                         VENTUS 2X BLACK OC GeForce<br>
                         RTX 4060 VENTUS 2X<br>
@@ -74,12 +74,12 @@
                     <p class="p1" style="color: black; font-weight: bold;">Цена: <s>200654</s> тг<b><sup>189900 тг</sup></b></p>
                     <p class="p1">В наличии<br>55 штук</p>
                     <div class="icons-for-card">
-                        <a href="#"><img class="heart-icon-1" src="assets/images/icons8-heart-50.png" alt=""></a>
-                        <a href="#"><img class="heart-icon-2" src="assets/images/icons8-basket-50.png" alt=""></a>
+                        <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
+                        <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
                     </div>
                 </section>
                 <section class="section-card-4">
-                    <h1 class="h1-title" >RTX 3060</h1><img class="image-begin-1" src="assets/images/3060.png" alt=""><p class="p">
+                    <h1 class="h1-title" >RTX 3060</h1><img class="image-begin-1" src="{% static "images/3060.png"%}" alt=""><p class="p">
                         Видеокарта GIGABYTE GeForce <br>
                         RTX 3060 GAMING OC [GV-N3060GAMING OC-12GD]<br>
                         PCI-E 4.0 12 ГБ GDDR6<br>
@@ -87,8 +87,8 @@
                     <p class="p1" style="color: black; font-weight: bold;">Цена:<s>179800</s> тг<b><sup>162300 тг</sup></b></p>
                     <p class="p1">В наличии <br>22 штук</p>
                     <div class="icons-for-card">
-                        <a href="#"><img class="heart-icon-1" src="assets/images/icons8-heart-50.png" alt=""></a>
-                        <a href="#"><img class="heart-icon-2" src="assets/images/icons8-basket-50.png" alt=""></a>
+                        <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
+                        <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
                     </div>
                 </section>
             </div>
@@ -102,7 +102,7 @@
         <div class="main-section2">
             <div class="section-main-mid12">
                 <section class="section-card-1">
-                    <h1 class="h1-title">RX 7900XTX</h1><img class="image-begin-1" src="assets/images/7900xtx.png" alt=""><p class="p">
+                    <h1 class="h1-title">RX 7900XTX</h1><img class="image-begin-1" src="{% static "images/7900xtx.png"%}" alt=""><p class="p">
                         Видеокарта ASRock AMD Radeon <br>
                         RX 7900 XTX Taichi OC <br>
                         [RX7900XTX TC 24GO] <br>
@@ -110,12 +110,12 @@
                     <p class="p1" style="color: black; font-weight: bold;">Цена: <s>846000</s> тг<b><sup>822300 тг</sup></b></p>
                     <p class="p1">В наличии <br>22 штук</p>
                     <div class="icons-for-card">
-                        <a href="#"><img class="heart-icon-1" src="assets/images/icons8-heart-50.png" alt=""></a>
-                        <a href="#"><img class="heart-icon-2" src="assets/images/icons8-basket-50.png" alt=""></a>
+                        <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
+                        <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
                     </div>
                 </section>
                 <section class="section-card-2">
-                    <h1 class="h1-title" >RX 5600 XT</h1><img class="image-begin-1" src="assets/images/5600.png" alt=""><p class="p">
+                    <h1 class="h1-title" >RX 5600 XT</h1><img class="image-begin-1" src="{% static "images/5600.png"%}" alt=""><p class="p">
                         Видеокарта MSI <br>
                         RX 5600 XT GAMING MX <br>
                         6GB 192bit/G6 (HDMI+3DP) <br>
@@ -123,12 +123,12 @@
                     <p class="p1" style="color: black; font-weight: bold;">Цена: <s>115000</s> тг<b><sup>102300 тг</sup></b></p>
                     <p class="p1">В наличии <br>22 штук</p>
                     <div class="icons-for-card">
-                        <a href="#"><img class="heart-icon-1" src="assets/images/icons8-heart-50.png" alt=""></a>
-                        <a href="#"><img class="heart-icon-2" src="assets/images/icons8-basket-50.png" alt=""></a>
+                        <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
+                        <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
                     </div>
                 </section>
                 <section class="section-card-3">
-                    <h1 class="h1-title" >RX 6750 XT</h1><img class="image-begin-1" src="assets/images/6750.png" alt=""><p class="p">
+                    <h1 class="h1-title" >RX 6750 XT</h1><img class="image-begin-1" src="{% static "images/6750.png"%}" alt=""><p class="p">
                         Видеокарта MSI AMD Radeon <br>
                         RX 6750 XT GAMING X TRIO <br>
                         [RX 6750 XT GAMING <br>
@@ -136,12 +136,12 @@
                     <p class="p1" style="color: black; font-weight: bold;">Цена: <s>160000</s> тг<b><sup>142300 тг</sup></b></p>
                     <p class="p1">В наличии <br>22 штук</p>
                     <div class="icons-for-card">
-                        <a href="#"><img class="heart-icon-1" src="assets/images/icons8-heart-50.png" alt=""></a>
-                        <a href="#"><img class="heart-icon-2" src="assets/images/icons8-basket-50.png" alt=""></a>
+                        <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
+                        <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
                     </div>    
                 </section>
                 <section class="section-card-4">
-                    <h1 class="h1-title" >RX 6700</h1><img class="image-begin-1" src="assets/images/6700.png" alt=""><p class="p">
+                    <h1 class="h1-title" >RX 6700</h1><img class="image-begin-1" src="{% static "images/6700.png"%}" alt=""><p class="p">
                         Видеокарта GIGABYTE <br>
                         AMD Radeon RX 6700 XT <br>
                         [GV-R67XTGAMING OC-12GD]<br>
@@ -150,8 +150,8 @@
                     <p class="p1" style="color: black; font-weight: bold;">Цена: <s>198000</s>тг<b><sup>122300 тг</sup></b></p>
                     <p class="p1">В наличии <br>10 штук</p>
                     <div class="icons-for-card">
-                        <a href="#"><img class="heart-icon-1" src="assets/images/icons8-heart-50.png" alt=""></a>
-                        <a href="#"><img class="heart-icon-2" src="assets/images/icons8-basket-50.png" alt=""></a>
+                        <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
+                        <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
                     </div>
                 </section>
             </div>
@@ -165,37 +165,37 @@
         <div class="main-middle-section">
             <div class="middle-section">
                 <div class="middle-section-h1" >Почему вы должны выбрать НАС?</div>
-                <img  class="middle-logo" src="assets/images/middle-logo" alt="">
+                <img  class="middle-logo" src="{% static "images/middle-logo" %} " alt="">
             </div>
         </div>
         <div class="middle-section-footer2">
             <div class="middle-section-header2">
                 <div class="section-main-mid122">
                     <section class="section-middle-card-1">
-                        <h3 class="h3-title">Надежность техники</h3><img src="assets/images/settings.png">
+                        <h3 class="h3-title">Надежность техники</h3><img src="{% static "images/settings.png"%}">
                         <div class="con">
-                          <img src="assets/images/надежность.jpg" alt="Avatar" style="width:290px"; height="200px">
+                          <img src="{% static "images/надежность.jpg" %} " alt="Avatar" style="width:290px"; height="200px">
                         </div>
                         <div class="footer-word">Надежность товара, соответсвующим всем требованиям <br> обращатся в сервисный центр!</div>
                     </section>
                     <section class="section-middle-card-2">
-                        <h3 class="h3-title">Гарантиные возвраты</h3><img src="assets/images/g.png">
+                        <h3 class="h3-title">Гарантиные возвраты</h3><img src="{% static "images/g.png"%}">
                         <div class="con">
-                            <img src="assets/images/возврат.png" alt="Avatar" style="width:290px"; height="200px">
+                            <img src="{% static "images/возврат.png"%}" alt="Avatar" style="width:290px"; height="200px">
                         </div>
                         <div class="footer-word">Гарантия на все товары 1 год, возврат при наличии чека и хорошего состояния товара</div>
                     </section>
                     <section class="section-middle-card-3">
-                        <h3 class="h3-title" >Обратная связь</h3><img src="assets/images/edit.png">
+                        <h3 class="h3-title" >Обратная связь</h3><img src="{% static "images/edit.png"%}">
                        <div class="con">
-                            <img src="assets/images/оператор.png" alt="Avatar" style="width:290px"; height="200px">
+                            <img src="{% static "images/оператор.png"%}" alt="Avatar" style="width:290px"; height="200px">
                         </div>
                         <div class="footer-word">Обратная свзять в течении 24/7, напишите если есть вопросы<br> обращатся в сервисный центр!</div>
                     </section>
                     <section class="section-middle-card-4">
-                        <h3 class="h3-title">Сертификат</h3><img src="assets/images/support.png">
+                        <h3 class="h3-title">Сертификат</h3><img src="{% static "images/support.png"%}">
                         <div class="con">
-                            <img src="assets/images/сертификат.jpg" alt="Avatar" style="width:290px"; height="200px">
+                            <img src="{% static "images/сертификат.jpg" %}" alt="Avatar" style="width:290px"; height="200px">
                         </div>
                         <div class="footer-word">Международный сертификат, подлежащего товара от всемирного Скибиди тойлет</div>
                     </section>
@@ -259,12 +259,12 @@
     </footer>-->
         <footer class="footer">
             <ul class="social">
-                <li><a href="#"><img src="assets/images/pinterest.png" name="assets/images/whatsapp.png"></a></li>
-                <li><a href="#"><img src="assets/images/whatsapp.png" name="assets/images/facebook.png"></a></li>
-                <li><a href="#"><img src="assets/images/youtube.png" name="assets/images/youtube.png"></a></li>
-                <li><a href="#"><img src="assets/images/instagram.png" name="assets/images/instagram.png"></a></li>
-                <li><a href="#"><img src="assets/images/facebook.png" name="assets/images/whatsapp.png"></a></li>
-                <li><a href="#"><img src="assets/images/network.png" name="assets/images/whatsapp.png"></a></li>
+                <li><a href="#"><img src="{% static "images/pinterest.png"%}" name="{% static "images/whatsapp.png"%}"></a></li>
+                <li><a href="#"><img src="{% static "images/whatsapp.png"%}" name="{% static "images/facebook.png"%}"></a></li>
+                <li><a href="#"><img src="{% static "images/youtube.png"%}" name="{% static "images/youtube.png"%}"></a></li>
+                <li><a href="#"><img src="{% static "images/instagram.png"%}" name="{% static "images/instagram.png"%}"></a></li>
+                <li><a href="#"><img src="{% static "images/facebook.png"%}" name="{% static "images/whatsapp.png"%}"></a></li>
+                <li><a href="#"><img src="{% static "images/network.png"%}" name="{% static "images/whatsapp.png"%}"></a></li>
             </ul>
             <ul class="menu">
                 <li><a href="#">Главное</a></li>

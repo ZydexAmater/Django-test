@@ -435,7 +435,7 @@ section {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 600px) {}
 .con {
     text-align: center;
 }
