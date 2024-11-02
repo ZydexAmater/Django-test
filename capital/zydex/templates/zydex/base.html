@@ -1,0 +1,142 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="{% static "images/favicon.svg" type="image/png"%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Tech Now</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navigation">
+                <a href="https://www.tiktok.com/@glleeb8/video/6990765453693996293?q=nigerss&t=1714915074906"><img src="{% static "images/pc1.png"%}" class="img-logo"></a>
+                <a class="active" href="{% url "zydex:index" %}">Главное</a>
+                <a href="{% url "zydex:categories" %}">Товары</a>
+                <a href="#">Акции</a>
+                <a href="#">Вопросы и <br> ответы</a>
+                <a href="#">Наши партнеры</a>
+                <a href=""><img src="{% static "images/basket.png"%}" alt="" class="img-logo-2"></a>
+            </div>
+            {% block slide%}
+            {%endblock%}
+        {% block content %}
+        {% endblock %}
+        
+    
+    <!--<footer class="footer">
+        <div class="footer-seperator">
+            <div class="content-lg container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <ul class="footer-list">
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">Home</a></li>
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">About</a></li>
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">Products</a></li>
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">Pricing</a></li>
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">Clients</a></li>
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">Careers</a></li>
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">Contact</a></li>
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">Terms</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="footer-list-2">
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">Twitter</a></li>
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">Facebook</a></li>
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">Instagram</a></li>
+                            <li class="footer-list-item"><a class="footer-list-link" href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                    <form class="footer-feedback" action="" method="get">
+                        <label class="label-name" >
+                            Ваше имя:
+                            <input class="footer-input" type="text" name="name" placeholder="Иван Иванов">
+                        </label>
+                           
+                        <label class="label-name">
+                            Электронная почта:
+                            <input class="footer-input" type="email" name="email" placeholder="example@email.com">
+                        </label>
+                        <label class="label-name">
+                            Отзыв:
+                            <textarea class="footer-textarea" name="comment" placeholder="Что вам понравилось?"></textarea>
+                        </label>
+                        <button class="footer-button" type="submit">
+                            Отправить
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        <div class="content container">
+            <div class="row">
+            <div class="footer-botom">
+                <p class="footer-p"><a class="footer-name" href="#">КМИБО</a> ЖЕНИС 68а <a class="footer-link" href="#">KeenThemes.com</a></p>
+            </div>
+            </div>
+        </div>
+    </footer>-->
+        <footer class="footer">
+            <ul class="social">
+                <li><a href="#"><img src="{% static "images/pinterest.png"%}" name="{% static "images/whatsapp.png"%}"></a></li>
+                <li><a href="#"><img src="{% static "images/whatsapp.png"%}" name="{% static "images/facebook.png"%}"></a></li>
+                <li><a href="#"><img src="{% static "images/youtube.png"%}" name="{% static "images/youtube.png"%}"></a></li>
+                <li><a href="#"><img src="{% static "images/instagram.png"%}" name="{% static "images/instagram.png"%}"></a></li>
+                <li><a href="#"><img src="{% static "images/facebook.png"%}" name="{% static "images/whatsapp.png"%}"></a></li>
+                <li><a href="#"><img src="{% static "images/network.png"%}" name="{% static "images/whatsapp.png"%}"></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="#">Главное</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Сервисы</a></li>
+                <li><a href="#">Команда</a></li>
+                <li><a href="#">Контакты</a></li>
+             </ul>
+                <form class="footer-feedback" action="" method="get">
+                            <label class="label-name" >
+                                Ваше имя:
+                                <input class="footer-input" type="text" name="name" placeholder="Иван Иванов">
+                            </label>
+                                   
+                            <label class="label-name">
+                                Электронная почта:
+                                <input class="footer-input" type="email" name="email" placeholder="example@email.com">
+                            </label>
+                            <label class="label-name">
+                                Отзыв:
+                                <textarea class="footer-textarea" name="comment" placeholder="Что вам понравилось?"></textarea>
+                            </label>
+                            <button class="footer-button" type="submit">
+                                Отправить
+                            </button>
+                        </form>
+                <p style="font-size: 23px;">©2024 Онлайн магазин | Все права защищены <br> Наш адрес: Женис 68а</p>
+        </footer>
+    </div>
+    <script>
+        let cu = 0;
+        const slides = document.querySelectorAll('.slide')
+        const s = 3000;
+
+        function c(){
+            slides[cu].style.opacity = 0;
+            cu = (cu + 1) % slides.length;
+            slides[cu].style.opacity = 1;
+        }
+        setInterval(c, s)
+    </script>
+</body>
+</html>

@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def index(requests):
     return render(requests, 'zydex/index.html')
+
+def categories(requests):
+    return render(requests, 'zydex/categories.html')
