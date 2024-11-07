@@ -1,8 +1,10 @@
 {% extends "zydex/base.html" %}
 {% load static %}
 
-
-{%block slide %}
+<head>
+{%block css%}<link rel="stylesheet" href="{% static "css/main.css" %}"> {% endblock %}
+</head>
+{% block slide %}
 <div class="head-context-slider">
     <img src="{% static "images/4060.png"%}" alt="" class="slide">
     <img src="{% static "images/3060.png"%}" alt="" class="slide">
@@ -11,7 +13,7 @@
     <img src="{% static "images/1070.png"%}" alt="" class="slide">
 </div>
 </div>
-{%endblock%}
+{% endblock %}
 
 {% block content %}
 <div class="main-middle-section">

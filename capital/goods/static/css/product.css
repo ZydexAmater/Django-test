@@ -4,12 +4,16 @@ body {
   }
 
 .navigation {
+    text-align: center;
+}
+
+.navigation {
     background-color: #1a1a1a;
     display: flex;
     justify-content: center;
     align-items: center; /* Выравниваем элементы по вертикали */
     padding: 10px 0;
-  }
+}
 
 .navigation a {
     float: left;
@@ -49,25 +53,28 @@ body {
     padding-left: 250px;
 }
 
+
 .navbar {
     background-color: #1a1a1a;
     display: flex;
     justify-content: center;
-    align-items: center; /* Выравниваем элементы по вертикали */
     padding: 10px 0;
 }
 
-.navbar a, .dropdown-toggle {
+.navbar a {
     color: white;
     padding: 10px 20px;
     text-decoration: none;
-    font-size: 18px;
-    font-style: italic;
-    transition: color 0.3s;
+    font-size: 28px;
+    
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
 }
 
-.navbar a:hover, .dropdown-toggle:hover {
-    color: #d4d4d4;
+.navbar a:hover {
+    color: #1b8d33;
 }
 
 /* Стиль для выпадающего меню */
@@ -75,10 +82,20 @@ body {
     position: relative;
 }
 
+.dropdown-toggle {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    
+    font-size: 18px;
+    font-style: italic;
+    transition: color 0.3s;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #e6a314;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     top: 100%; /* Выпадающий список находится ниже кнопки */
@@ -98,9 +115,11 @@ body {
 }
 
 /* Показываем выпадающий список при наведении */
+.dropdown:focus-within .dropdown-content,
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 
 .head-context-slider {
     position: relative;

@@ -22,4 +22,7 @@ from zydex import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('zydex.urls', namespace='zydex')),
+    path('about/', include('zydex.urls', namespace='about')),
+    path('product/', include('goods.urls', namespace='product')),
+    path('cart/', include('goods.urls', namespace='cart')),
 ]

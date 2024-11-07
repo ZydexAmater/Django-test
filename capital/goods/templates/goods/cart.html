@@ -1,0 +1,145 @@
+{% extends 'zydex/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <style>
+        /* Общие стили страницы */
+      
+
+        /* Заголовок */
+        
+
+        /* Контейнер для контента */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 1200px;
+            background: linear-gradient(to right, #ffdd00, #ff6600);
+        }
+
+        /* Карточка товара */
+        .product-card {
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .product-card h2 {
+            color: #ffb700;
+            margin-bottom: 10px;
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .product-info {
+            margin-top: 15px;
+        }
+
+        .price, .quantity {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .quantity {
+            color: #ffdd00;
+        }
+
+        /* Кнопка удалить */
+        .remove-button {
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .remove-button:hover {
+            background-color: #ff3300;
+        }
+
+        /* Секция итоговой суммы */
+        .total {
+            font-size: 24px;
+            color: #ffdd00;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        /* Кнопка оформления заказа */
+        .checkout-button {
+            background-color: #ffb700;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .checkout-button:hover {
+            background-color: #ffdd00;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Заголовок страницы -->
+
+<!-- Основной контент -->
+<div class="content">
+    <!-- Пример карточки товара в корзине -->
+    <div class="product-card">
+        <h2>RTX 4090</h2>
+        <img src="https://example.com/rtx4090.png" alt="RTX 4090">
+        <div class="product-info">
+            <div class="price">Цена: 1,240,000 тг</div>
+            <div class="quantity">Количество: 1</div>
+        </div>
+        <button class="remove-button">Удалить</button>
+    </div>
+
+    <div class="product-card">
+        <h2>RTX 3060</h2>
+        <img src="https://example.com/rtx3060.png" alt="RTX 3060">
+        <div class="product-info">
+            <div class="price">Цена: 200,654 тг</div>
+            <div class="quantity">Количество: 2</div>
+        </div>
+        <button class="remove-button">Удалить</button>
+    </div>
+
+    <!-- Итоговая сумма -->
+    <div class="total">
+        Итого: 1,641,308 тг
+    </div>
+
+    <!-- Кнопка оформления заказа -->
+    <button class="checkout-button">Оформить заказ</button>
+</div>
+
+{% endblock %}

@@ -1,7 +1,11 @@
 {% extends 'zydex/base.html' %}
 {% load static %}
 
-{%block content%}
+
+
+{% block css %} <link rel="stylesheet" href="{% static "css/categories.css" %}"> {% endblock %}
+
+{% block content %}
 <div class="main-section">
     <div class="h1-top">ТОП НАУҚАН!</div>
     <div class="section-main-mid-1">
@@ -59,12 +63,14 @@
             </div>
         </section>
     </div>
+
+    <!-- Кнопки купить
     <div class="buy_card_section">
         <section class="section-buy-1"><a href="#">КУПИТЬ</a></section>
         <section class="section-buy-2"><a href="#">КУПИТЬ</a></section>
         <section class="section-buy-3"><a href="#">КУПИТЬ</a></section>
         <section class="section-buy-4"><a href="#">КУПИТЬ</a></section>
-    </div>
+    </div> -->
 </div>
 <div class="main-section2">
     <div class="section-main-mid12">
@@ -122,11 +128,12 @@
             </div>
         </section>
     </div>
+    <!-- Кнопки купить
     <div class="buy_card_section">
         <section class="section-buy-1"><a href="#">КУПИТЬ</a></section>
         <section class="section-buy-2"><a href="#">КУПИТЬ</a></section>
         <section class="section-buy-3"><a href="#">КУПИТЬ</a></section>
         <section class="section-buy-4"><a href="#">КУПИТЬ</a></section>
-    </div>
-</div>
-{%endblock%}
+    </div>-->
+</div> 
+{% endblock %}

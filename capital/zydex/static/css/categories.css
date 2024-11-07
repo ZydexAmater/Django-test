@@ -4,11 +4,12 @@ body {
   }
 
 .navigation {
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Выравниваем элементы по вертикали */
-    padding: 10px 0;
+    text-align: center;
+}
+
+.navigation {
+    overflow: hidden;
+    background: linear-gradient(90deg,#0b0d0f,#1a1d21,#292e36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 
 .navigation a {
@@ -46,60 +47,7 @@ body {
 
 .img-logo-2 {
     float: right;
-    padding-left: 250px;
-}
-
-.navbar {
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Выравниваем элементы по вертикали */
-    padding: 10px 0;
-}
-
-.navbar a, .dropdown-toggle {
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    font-style: italic;
-    transition: color 0.3s;
-}
-
-.navbar a:hover, .dropdown-toggle:hover {
-    color: #d4d4d4;
-}
-
-/* Стиль для выпадающего меню */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    top: 100%; /* Выпадающий список находится ниже кнопки */
-    left: 0;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 10px 15px;
-    display: block;
-    text-decoration: none;
-}
-
-.dropdown-content a:hover {
-    background-color: #444;
-}
-
-/* Показываем выпадающий список при наведении */
-.dropdown:hover .dropdown-content {
-    display: block;
+    padding-left: 200px;
 }
 
 .head-context-slider {
@@ -130,6 +78,8 @@ section {
     width: 23%;
     text-align: center;
   }
+
+
 
 .main-section {
     background-color: #000000;
@@ -195,6 +145,11 @@ section {
     padding-top: 20px;
 }
 
+.section-main-mid12 {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
 .p1 {
     color: orange;
     text-align: center;
@@ -225,160 +180,6 @@ section {
     font-size: 22px;
     font-weight: bold;
 }
-
-.buy_card_section {
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.buy_card_section a {
-    font-size: 27px;
-    font-weight: bold;
-    padding-bottom: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-.buy_card_section a:hover{
-    color: yellow;
-    opacity: 0.6s;
-}
-
-.section-buy-1 {
-    background: -webkit-linear-gradient(90deg,#000000,#0091ff,#000000); /* Chrome 10-25, Safari 5.1-6 */
-    border: 1px solid aqua;
-    border-radius: 12px;
-    font-family: "Lilita One", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-}
-
-.section-buy-2 {
-    margin-left: 20px;
-    background: -webkit-linear-gradient(90deg,#000000,#0091ff,#000000); /* Chrome 10-25, Safari 5.1-6 */
-    border: 1px solid #66cccc;
-    border-radius: 12px;
-    font-family: "Lilita One", sans-serif;
-    font-weight: bold;
-    font-style: normal
-}
-
-.section-buy-3 {
-    margin-left: 23px;
-    background: -webkit-linear-gradient(90deg,#000000,#0091ff,#000000); /* Chrome 10-25, Safari 5.1-6 */
-    border: 1px solid #66cccc;
-    border-radius: 12px;
-    font-family: "Lilita One", sans-serif;
-    font-weight: bold;
-    font-style: normal
-}
-
-.section-buy-4 {
-    margin-left: 25px;
-    background: -webkit-linear-gradient(90deg,#000000,#0091ff,#000000); /* Chrome 10-25, Safari 5.1-6 */
-    border: 1px solid #66cccc;
-    border-radius: 12px;
-    font-family: "Lilita One", sans-serif;
-    font-weight: bold;
-    font-style: normal
-}
-
-.section-main-mid12 {
-    padding-top: 30px;
-    padding-bottom: 20px;
-}
-
-
-.main-middle-section {
-    background-color: white;
-    padding-bottom: 20px;
-}
-
-.middle-section {
-    height: 600px;
-    text-align: center;
-}
-
-
-
-.middle-section-h1 {
-    padding-top: 15px;
-    color: black;
-    font-weight: bold;
-    border-bottom: 3px solid #14faf2;
-    margin-left: 30px;
-    margin-right: 30px;
-    font-size: 60px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-}
-
-.middle-logo {
-    height: 500px;
-    width: 500px;
-}
-
-.middle-section-footer {
-    background: linear-gradient(#66cccc, white);
-}
-
-.section-main-mid122 {
-    background: linear-gradient(to top, #66cccc, white);
-    padding-left: 90px;
-    padding-bottom: 15px;
-}
-
-
-.h3-title {
-    color: brown;
-    border: 2px solid black;
-    border-radius: 9px;
-    font-size: 29px;
-}
-
-.footer-word {
-    font-size: 18px;
-    font-weight: 600;
-    font-family: sans-serif;
-}
-
-.section-middle-card-1 {
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 350px;
-}
-
-.section-middle-card-2 {
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    border-radius: 10px;
-    margin-left: 30px;
-    width: 350px;
-}
-
-.section-middle-card-3 {
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    border-radius: 10px;
-    margin-left: 50px;
-    width: 350px; /* Ширина блока */
-}
-
-.section-middle-card-4 {
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    border-radius: 10px;
-    margin-left: 50px;
-    width: 350px;
-
-}
-
 
 
 .footer-feedback div {
