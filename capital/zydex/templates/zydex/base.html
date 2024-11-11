@@ -1,12 +1,10 @@
 {% load static %}
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    {% block css %}  {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="shortcut icon" href="{% static "images/favicon.png" type="image/png"%}">
@@ -26,14 +24,14 @@
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle">Категории</a>
                     <div class="dropdown-content">
-                        <a href="#">Видеокарты GeForce</a>
-                        <a href="#">Видеокарты Amd</a>
-                        <a href="#">Видеокарты Intel</a>
+                        {% for category in categories %}
+                            <li style="list-style-type: none;"><a href="#">{{ category.name }}</a></li>
+                        {% endfor %}
                     </div>
                 </div>
                 <a href="{% url 'goods:product' %}">Товары</a>
                 <a href="{% url 'zydex:about' %}">Про нас</a>
-                <a href="#">Наши партнеры</a>
+                <a href="{% url 'admin:index' %}">Админ панель</a>
                 <a href="{% url 'goods:cart' %}"><img src="{% static "images/basket.png" %}" alt="" class="img-logo-2"></a>
             </div>
             {% block slide %}

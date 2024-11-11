@@ -18,11 +18,19 @@ from django.contrib import admin
 from django.urls import include, path
 from zydex import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('zydex.urls', namespace='zydex')),
     path('about/', include('zydex.urls', namespace='about')),
     path('product/', include('goods.urls', namespace='product')),
-    path('cart/', include('goods.urls', namespace='cart')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+if settings.DEBUG:
+    urlpatterns += [
+        path('__debug__/', include('debug_toolbar.urls')),
+    ]

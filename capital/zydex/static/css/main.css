@@ -78,12 +78,13 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #922626;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     top: 100%; /* Выпадающий список находится ниже кнопки */
     left: 0;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .dropdown-content a {
@@ -94,7 +95,8 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: #444;
+    background-color: #444444;
+    border-radius: 6px;
 }
 
 /* Показываем выпадающий список при наведении */
@@ -163,30 +165,8 @@ section {
     margin-left: 30px;
 }
 
-.section-card-1 {
+.section-card {
     border-radius: 6px;
-    
-    margin-left: 20px;
-    background: -webkit-linear-gradient(90deg,#f3f0d3,#e9e9d8,#f7f1b1);
-}
-
-.section-card-2 {
-    border-radius: 6px;
-    
-    margin-left: 20px;
-    
-    background: -webkit-linear-gradient(90deg,#f3f0d3,#e9e9d8,#f7f1b1);
-}
-.section-card-3 {
-    border-radius: 6px;
-   
-    margin-left: 20px;
-    background: -webkit-linear-gradient(90deg,#f3f0d3,#e9e9d8,#f7f1b1);
-}
-
-.section-card-4 {
-    border-radius: 6px;
-    
     margin-left: 20px;
     background: -webkit-linear-gradient(90deg,#f3f0d3,#e9e9d8,#f7f1b1);
 }

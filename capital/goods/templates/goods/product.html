@@ -8,132 +8,22 @@
 {% block content %}
 <div class="main-section">
     <div class="h1-top">ТОП НАУҚАН!</div>
-    <div class="section-main-mid-1">
-        <section class="section-card-1">
-            <h1 class="h1-title" >GTX 1080 TI</h1><img class="image-begin-1" src="{% static "images/1080.png"%}" alt=""><p class="p" >
-                Видеокарта Gigabyte Nvidia <br>
-                GeForce GTX 1080 Ti 11Gb Gaming <br>
-                OC(DVI+HDMI+3*DP) <br>
-                (GV-N108TGAMING OC-11GD)<br></p>
-            <p class="p1" style="color: black; font-weight: bold;">Цена: <s>199500</s> тг<b><sup>172300 тг</sup></b></p>
-            <p class="p1">В наличии<br>5 штук</p>
-            <div class="icons-for-card">
-                <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
-                <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
-            </div>    
-        </section>
-        <section class="section-card-2">
-            <h1 class="h1-title" >RTX 4090</h1><img class="image-begin-1" src="{% static "images/4090.png"%}" alt=""><p class="p">
-                Видеокарта GIGABYTE GeForce <br>
-                RTX 4090 GAMING OC <br>
-                [GV-N4090GAMING OC-24GD] <br>
-                [PCI-E 4.0 24 ГБ GDDR6X] <br></p>
-            <p class="p1" style="color: black; font-weight: bold;">Цена: <s>1244000</s> тг<b><sup>1212300 тг</sup></b></p>
-            
-            <p class="p1">В наличии<br>15 штук</p>
-            <div class="icons-for-card">
-                <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
-                <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
-            </div>
-        </section>
-        <section class="section-card-3">
-            <h1 class="h1-title" >RTX 4060</h1><img class="image-begin-1" src="{% static "images/4060.png"%}" alt=""><p class="p">
-                Видеокарта MSI GeForce RTX 4060<br>
-                VENTUS 2X BLACK OC GeForce<br>
-                RTX 4060 VENTUS 2X<br>
-                [PCI-E 4.0 24 ГБ GDDR6X] <br></p>
-            <p class="p1" style="color: black; font-weight: bold;">Цена: <s>200654</s> тг<b><sup>189900 тг</sup></b></p>
-            <p class="p1">В наличии<br>55 штук</p>
-            <div class="icons-for-card">
-                <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
-                <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
-            </div>
-        </section>
-        <section class="section-card-4">
-            <h1 class="h1-title" >RTX 3060</h1><img class="image-begin-1" src="{% static "images/3060.png"%}" alt=""><p class="p">
-                Видеокарта GIGABYTE GeForce <br>
-                RTX 3060 GAMING OC [GV-N3060GAMING OC-12GD]<br>
-                PCI-E 4.0 12 ГБ GDDR6<br>
-                </p>
-            <p class="p1" style="color: black; font-weight: bold;">Цена:<s>179800</s> тг<b><sup>162300 тг</sup></b></p>
-            <p class="p1">В наличии <br>22 штук</p>
-            <div class="icons-for-card">
-                <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
-                <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
-            </div>
-        </section>
+        <div class="section-main-mid-1">
+            <section class="section-card">
+                {% for product in products %}
+                    <h1 class="h1-title" >{{ product.name }}</h1>
+                    <img class="image-begin-1" src="{% static "images/tamaev.jpg"%}" alt="">
+                    <p class="p" >
+                        {{ product.description }}</p>
+                    <p class="p1" style="color: black; font-weight: bold;"><b> Цена: {{ product.price }}</b></p>
+                    <p class="p1">Количество: {{ product.quantity }}</p>
+                    <div class="icons-for-card">
+                        <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
+                        <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
+                    </div>
+                {% endfor %}    
+            </section>
+        </div>
     </div>
-
-    <!-- Кнопки купить
-    <div class="buy_card_section">
-        <section class="section-buy-1"><a href="#">КУПИТЬ</a></section>
-        <section class="section-buy-2"><a href="#">КУПИТЬ</a></section>
-        <section class="section-buy-3"><a href="#">КУПИТЬ</a></section>
-        <section class="section-buy-4"><a href="#">КУПИТЬ</a></section>
-    </div> -->
-</div>
-<div class="main-section2">
-    <div class="section-main-mid12">
-        <section class="section-card-1">
-            <h1 class="h1-title">RX 7900XTX</h1><img class="image-begin-1" src="{% static "images/7900xtx.png"%}" alt=""><p class="p">
-                Видеокарта ASRock AMD Radeon <br>
-                RX 7900 XTX Taichi OC <br>
-                [RX7900XTX TC 24GO] <br>
-                [PCI-E 4.0 24 ГБ GDDR6, 384 бит</p>
-            <p class="p1" style="color: black; font-weight: bold;">Цена: <s>846000</s> тг<b><sup>822300 тг</sup></b></p>
-            <p class="p1">В наличии <br>22 штук</p>
-            <div class="icons-for-card">
-                <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
-                <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
-            </div>
-        </section>
-        <section class="section-card-2">
-            <h1 class="h1-title" >RX 5600 XT</h1><img class="image-begin-1" src="{% static "images/5600.png"%}" alt=""><p class="p">
-                Видеокарта MSI <br>
-                RX 5600 XT GAMING MX <br>
-                6GB 192bit/G6 (HDMI+3DP) <br>
-                (RX 5600 XT GAMING MX)</p>
-            <p class="p1" style="color: black; font-weight: bold;">Цена: <s>115000</s> тг<b><sup>102300 тг</sup></b></p>
-            <p class="p1">В наличии <br>22 штук</p>
-            <div class="icons-for-card">
-                <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
-                <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
-            </div>
-        </section>
-        <section class="section-card-3">
-            <h1 class="h1-title" >RX 6750 XT</h1><img class="image-begin-1" src="{% static "images/6750.png"%}" alt=""><p class="p">
-                Видеокарта MSI AMD Radeon <br>
-                RX 6750 XT GAMING X TRIO <br>
-                [RX 6750 XT GAMING <br>
-                X TRIO 12G]</p>
-            <p class="p1" style="color: black; font-weight: bold;">Цена: <s>160000</s> тг<b><sup>142300 тг</sup></b></p>
-            <p class="p1">В наличии <br>22 штук</p>
-            <div class="icons-for-card">
-                <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
-                <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
-            </div>    
-        </section>
-        <section class="section-card-4">
-            <h1 class="h1-title" >RX 6700</h1><img class="image-begin-1" src="{% static "images/6700.png"%}" alt=""><p class="p">
-                Видеокарта GIGABYTE <br>
-                AMD Radeon RX 6700 XT <br>
-                [GV-R67XTGAMING OC-12GD]<br>
-                GDDR6, 192 бит, 2 x DisplayPort, <br>
-                </p>
-            <p class="p1" style="color: black; font-weight: bold;">Цена: <s>198000</s>тг<b><sup>122300 тг</sup></b></p>
-            <p class="p1">В наличии <br>10 штук</p>
-            <div class="icons-for-card">
-                <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
-                <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
-            </div>
-        </section>
-    </div>
-    <!-- Кнопки купить
-    <div class="buy_card_section">
-        <section class="section-buy-1"><a href="#">КУПИТЬ</a></section>
-        <section class="section-buy-2"><a href="#">КУПИТЬ</a></section>
-        <section class="section-buy-3"><a href="#">КУПИТЬ</a></section>
-        <section class="section-buy-4"><a href="#">КУПИТЬ</a></section>
-    </div>-->
 </div> 
 {% endblock %}
