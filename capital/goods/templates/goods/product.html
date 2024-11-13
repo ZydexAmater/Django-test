@@ -8,22 +8,30 @@
 {% block content %}
 <div class="main-section">
     <div class="h1-top">ТОП НАУҚАН!</div>
+    {% for product in products %}
         <div class="section-main-mid-1">
             <section class="section-card">
-                {% for product in products %}
-                    <h1 class="h1-title" >{{ product.name }}</h1>
-                    <img class="image-begin-1" src="{% static "images/tamaev.jpg"%}" alt="">
-                    <p class="p" >
-                        {{ product.description }}</p>
+                <h1 class="h1-title" >{{ product.name }}</h1>
+                {% if product.image %}
+                    <img class="image-begin-1" src="{{ product.image.url }}" alt="">
+                {% endif %}
+                <p class="p" >{{ product.description }}</p>
+                {% if product.discount %}
+                    <p class="p1" style="color: black; font-weight: bold;"><b><s>{{ product.price }}</s></b></p>
+                    <p class="p1" style="color: red; font-weight: bold;"><b> Скидка: {{ product.discount }}%</b></p>
+                    <p class="p1" style="color: black; font-weight: bold;"><b> Цена: {{ product.get_discount_price }}</b></p>
+                {% else %}
                     <p class="p1" style="color: black; font-weight: bold;"><b> Цена: {{ product.price }}</b></p>
-                    <p class="p1">Количество: {{ product.quantity }}</p>
-                    <div class="icons-for-card">
-                        <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
-                        <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
-                    </div>
-                {% endfor %}    
+                {% endif %}
+
+                <p class="p1">Количество: {{ product.quantity }}</p>
+                <div class="icons-for-card">
+                    <a href="#"><img class="heart-icon-1" src="{% static "images/icons8-heart-50.png"%}" alt=""></a>
+                    <a href="#"><img class="heart-icon-2" src="{% static "images/icons8-basket-50.png"%}" alt=""></a>
+                </div>
             </section>
         </div>
+    {% endfor %} 
     </div>
 </div> 
 {% endblock %}

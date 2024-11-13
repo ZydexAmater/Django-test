@@ -49,6 +49,16 @@ body {
     padding-left: 250px;
 }
 
+.login{
+    float: right;
+    padding-right: 50px;
+}
+
+.register{
+    float: right;
+    padding-right: 50px;
+}
+
 .navbar {
     background-color: #1a1a1a;
     display: flex;
@@ -320,6 +330,7 @@ section {
     font-size: 18px;
     font-weight: 600;
     font-family: sans-serif;
+    padding-bottom: 14px;
 }
 
 .section-middle-card-1 {

@@ -5,12 +5,12 @@ from goods.models import Products
 # Create your views here.
 
 products = Products.objects.all()
-categories = Products.objects.all()
+#categories = Products.objects.all()
 
 def product(requests):
     context = {
         'products': products,
-        'categories': categories,
+        #'categories': categories,
     }
     return render(requests, 'goods/product.html', context)
 

@@ -1,10 +1,11 @@
 {% load static %}
+{% load tags %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% block css %}  {% endblock %}
+    {% block css %} <link rel="stylesheet" href="{% static "css/main.css" %}"> {% endblock %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="shortcut icon" href="{% static "images/favicon.png" type="image/png"%}">
@@ -24,6 +25,7 @@
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle">Категории</a>
                     <div class="dropdown-content">
+                        {% tag_categories as categories %}
                         {% for category in categories %}
                             <li style="list-style-type: none;"><a href="#">{{ category.name }}</a></li>
                         {% endfor %}
@@ -33,6 +35,8 @@
                 <a href="{% url 'zydex:about' %}">Про нас</a>
                 <a href="{% url 'admin:index' %}">Админ панель</a>
                 <a href="{% url 'goods:cart' %}"><img src="{% static "images/basket.png" %}" alt="" class="img-logo-2"></a>
+                <a href="" class="login">Воити</a>
+                <a href="" class="register">Регистрация</a>
             </div>
             {% block slide %}
             {% endblock %}

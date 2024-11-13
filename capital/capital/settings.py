@@ -125,6 +125,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -138,8 +139,7 @@ INTERNAL_IPS = [
 ]
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')#this line is added and it serves as the root address of 
-#uploaded file
+MEDIA_ROOT = BASE_DIR / 'media'
  
-MEDIA_URL = '/media/'#this line is added and it creates a directory named media in your appfolder
+MEDIA_URL = 'media/'#this line is added and it creates a directory named media in your appfolder
 #where the uploaded images will be stored
