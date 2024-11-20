@@ -1,10 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render # type: ignore
 
 from goods.models import Products
 
 
-def catalog(requests):
-    products = Products.objects.all()
+def catalog(requests, catalog_slug):
+    if catalog_slug == 'all':
+        products = Products.objects.all()
+    else:
+        products = Products.objects.filter(category__slug=catalog_slug)
+        
     context = {
         'products': products,
         #'categories': categories,

@@ -27,11 +27,10 @@
                     <div class="dropdown-content">
                         {% tag_categories as categories %}
                         {% for category in categories %}
-                            <li style="list-style-type: none;"><a href="#">{{ category.name }}</a></li>
+                            <a href="{% url 'catalog:index' category.slug %}" class="dropdown-item">{{ category.name }}</a>
                         {% endfor %}
                     </div>
                 </div>
-                <a href="{% url 'goods:catalog' %}">Товары</a>
                 <a href="{% url 'zydex:about' %}">Про нас</a>
                 <a href="{% url 'admin:index' %}">Админ панель</a>
                 <a href="{% url 'goods:cart' %}"><img src="{% static "images/basket.png" %}" alt="" class="img-logo-2"></a>
@@ -44,12 +43,10 @@
         {% endblock %}
         <footer class="footer">
             <ul class="social">
-                <li><a href="#"><img src="{% static "images/pinterest.png"%}" name="{% static "images/whatsapp.png"%}"></a></li>
                 <li><a href="#"><img src="{% static "images/whatsapp.png"%}" name="{% static "images/facebook.png"%}"></a></li>
                 <li><a href="#"><img src="{% static "images/youtube.png"%}" name="{% static "images/youtube.png"%}"></a></li>
                 <li><a href="#"><img src="{% static "images/instagram.png"%}" name="{% static "images/instagram.png"%}"></a></li>
                 <li><a href="#"><img src="{% static "images/facebook.png"%}" name="{% static "images/whatsapp.png"%}"></a></li>
-                <li><a href="#"><img src="{% static "images/network.png"%}" name="{% static "images/whatsapp.png"%}"></a></li>
             </ul>
             <ul class="menu">
                 <li><a href="#">Главное</a></li>
