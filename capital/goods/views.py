@@ -1,17 +1,23 @@
 from django.shortcuts import render # type: ignore
+from django.core.paginator import Paginator
 
 from goods.models import Products
 
 
-def catalog(requests, catalog_slug):
-    if catalog_slug == 'all':
-        products = Products.objects.all()
+def catalog(requests, category_slug):
+    page = requests.GET.get('page', 1)
+    
+    if category_slug == 'all':
+        goods = Products.objects.all()
     else:
-        products = Products.objects.filter(category__slug=catalog_slug)
-        
+        goods = Products.objects.filter(category__slug=category_slug)
+
+    paginator = Paginator(goods, 3)
+    current_page = paginator.page(int(page))
+
     context = {
-        'products': products,
-        #'categories': categories,
+        'goods': current_page,
+        'slug_url': category_slug,
     }
     return render(requests, 'goods/catalog.html', context)
 

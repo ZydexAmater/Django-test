@@ -41,7 +41,21 @@
             {% endblock %}
         {% block content %}
         {% endblock %}
+        
         <footer class="footer">
+                <ul class="pagination">
+                    <li class="{% if not goods or not goods.has_previous %}disabled{% endif %}">
+                        <a id="prev" href="{% if goods.has_previous %}?page={{ goods.previous_page_number }}{% else %}#{% endif %}">Previous</a>
+                    </li>
+                    {% for page in goods.paginator.page_range %}
+                        <li class="{% if goods.number == page %}active{% endif %}">
+                            <a href="?page={{ page }}">{{ page }}</a>
+                        </li>
+                    {% endfor %}
+                    <li class="{% if not goods.has_next %}disabled{% endif %}">
+                        <a id="next" href="{% if goods.has_next %}?page={{ goods.next_page_number }}{% else %}#{% endif %}">Next</a>
+                    </li>
+                </ul>
             <ul class="social">
                 <li><a href="#"><img src="{% static "images/whatsapp.png"%}" name="{% static "images/facebook.png"%}"></a></li>
                 <li><a href="#"><img src="{% static "images/youtube.png"%}" name="{% static "images/youtube.png"%}"></a></li>
