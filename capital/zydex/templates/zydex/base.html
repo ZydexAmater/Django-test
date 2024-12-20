@@ -25,13 +25,16 @@
                     <input type="checkbox" id="menu-toggle" class="menu-toggle">
                     <label for="menu-toggle" class="menu-button">Фильтры</label>
                     <div class="menu-content">
-                        {% if slug_url %}
+                        {% if slug_url and request.GET.q %}
                         <form action="{% url 'catalog:index' slug_url|default:'' %}"  method="get" class="menu-form">
                         {% else %}
                         <form action=""  method="get" class="menu-form">
                         {% endif %}
                             <div class="menu-item">
                                 <input type="checkbox" id="on-sale" class="menu-checkbox" name="on_sale" value="on" {% if request.GET.on_sale %}checked{% endif %}>
+                                {% if request.GET.on_sale %}
+                                    <input type="hidden" name="q" value="{{ request.GET.q }}">
+                                {% endif %}
                                 <label for="on-sale" class="menu-label">Товары по акции</label>
                             </div>
                             <p class="menu-title">Сортировать:</p>
@@ -64,8 +67,12 @@
                 <a href="{% url 'zydex:about' %}">Про нас</a>
                 <a href="{% url 'admin:index' %}">Админ панель</a>
                 <a href="{% url 'goods:cart' %}"><img src="{% static "images/basket.png" %}" alt="" class="img-logo-2"></a>
-                <a href="" class="login">Воити</a>
-                <a href="" class="register">Регистрация</a>
+                <form action="{% url 'catalog:search' %}" method="get" class="search-form" role="search">
+                    <input type="text" name="q" placeholder="Search" class="search-input">
+                    <button type="submit" class="search-button">Поиск</button>
+                </form>
+                <!--<a href="" class="login">Воити</a>
+                <a href="" class="register">Регистрация</a>-->
             </div>
             {% block slide %}
             {% endblock %}
