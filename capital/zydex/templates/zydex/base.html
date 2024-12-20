@@ -75,15 +75,15 @@
         <footer class="footer">
                 <ul class="pagination">
                     <li class="{% if not goods or not goods.has_previous %}disabled{% endif %}">
-                        <a id="prev" href="{% if goods.has_previous %}?page={{ goods.previous_page_number }}{% else %}#{% endif %}">Previous</a>
+                        <a id="prev" href="{% if goods.has_previous %}?{% change_params page=goods.previous_page_number %}{% else %}#{% endif %}">Previous</a>
                     </li>
                     {% for page in goods.paginator.page_range %}
                         <li class="{% if goods.number == page %}active{% endif %}">
-                            <a href="?page={{ page }}">{{ page }}</a>
+                            <a href="?{% change_params page=page %}">{{ page }}</a>
                         </li>
                     {% endfor %}
                     <li class="{% if not goods.has_next %}disabled{% endif %}">
-                        <a id="next" href="{% if goods.has_next %}?page={{ goods.next_page_number }}{% else %}#{% endif %}">Next</a>
+                        <a id="next" href="{% if goods.has_next %}?{% change_params page=goods.next_page_number %}{% else %}#{% endif %}">Next</a>
                     </li>
                 </ul>
             <ul class="social">
