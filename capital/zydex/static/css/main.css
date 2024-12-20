@@ -3,6 +3,74 @@ body {
     padding: 0;
   }
 
+  .menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 5px;
+    width: 220px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.menu-toggle:checked ~ .menu-content {
+    display: block;
+}
+
+.menu-item {
+    padding: 10px;
+}
+
+.menu-label {
+    cursor: pointer;
+}
+
+.menu-radio, .menu-checkbox {
+    margin-right: 10px;
+}
+
+.menu-title {
+    padding: 10px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.menu-submit {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-submit:hover {
+    background-color: #0056b3;
+}
 .navigation {
     background-color: #1a1a1a;
     display: flex;

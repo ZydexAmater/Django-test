@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Form</title>
+    <style>
+        /* General styling for the dropdown container */
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        /* Dropdown container wrapping the form */
+        .dropdown-container {
+        position: relative;
+        display: inline-block;
+        }
+
+        /* Dropdown button styling */
+        .filter-btn {
+        display: inline-block;
+        background-color: #008CBA;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        }
+
+        .filter-btn:hover {
+        background-color: #005f73;
+        }
+
+        /* Dropdown content styling (hidden by default) */
+        .filter-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        min-width: 200px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        border-radius: 5px;
+        padding: 10px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        }
+
+        /* When the form is in focus, show the dropdown */
+        .filter-form:focus-within .filter-dropdown {
+        display: block;
+        opacity: 1;
+        pointer-events: all;
+        }
+
+        /* Styling for radio buttons and labels inside the dropdown */
+        .filter-options label {
+        display: block;
+        padding: 8px 0;
+        cursor: pointer;
+        }
+
+        .filter-options input[type="radio"] {
+        margin-right: 10px;
+        }
+
+        /* Apply button styling */
+        .apply-btn {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 0;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        }
+
+        .apply-btn:hover {
+        background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Фильтр товаров</h1>
+
+<div class="dropdown-container">
+    <form class="filter-form">
+      <div class="filter-dropdown">
+        <label for="filter" class="filter-btn">Сортировать</label>
+        
+        <div class="filter-options">
+          <label>
+            <input type="radio" name="filter" id="default-filter" checked> По умолчанию
+          </label>
+          <label>
+            <input type="radio" name="filter" id="low-to-high"> От дешевых к дорогим
+          </label>
+          <label>
+            <input type="radio" name="filter" id="high-to-low"> От дорогих к дешевым
+          </label>
+        </div>
+  
+        <button class="apply-btn" type="submit">Применить</button>
+      </div>
+    </form>
+  </div>
+  
+
+</body>
+</html>

@@ -21,6 +21,36 @@
         <div class="container">
             <div class="navigation">
                 <a href="https://www.tiktok.com/@glleeb8/video/6990765453693996293?q=nigerss&t=1714915074906"><img src="{% static "images/pc1.png" %}" class="img-logo"></a>
+                <div class="menu-container">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-button">Фильтры</label>
+                    <div class="menu-content">
+                        {% if slug_url %}
+                        <form action="{% url 'catalog:index' slug_url|default:'' %}"  method="get" class="menu-form">
+                        {% else %}
+                        <form action=""  method="get" class="menu-form">
+                        {% endif %}
+                            <div class="menu-item">
+                                <input type="checkbox" id="on-sale" class="menu-checkbox" name="on_sale" value="on" {% if request.GET.on_sale %}checked{% endif %}>
+                                <label for="on-sale" class="menu-label">Товары по акции</label>
+                            </div>
+                            <p class="menu-title">Сортировать:</p>
+                            <div class="menu-item">
+                                <input type="radio" id="sort-default" class="menu-radio" name="order_by" value="default" {% if not request.GET.order_by or request.GET.order_by == "default" %}checked{% endif %}>
+                                <label for="sort-default" class="menu-label">По умолчанию</label>
+                            </div>
+                            <div class="menu-item">
+                                <input type="radio" id="sort-asc" class="menu-radio" name="order_by" value="price" {% if request.GET.order_by == "price" %}checked{% endif %}>
+                                <label for="sort-asc" class="menu-label">От дешевых к дорогим</label>
+                            </div>
+                            <div class="menu-item">
+                                <input type="radio" id="sort-desc" class="menu-radio" name="order_by" value="-price" {% if request.GET.order_by == "-price" %}checked{% endif %}>
+                                <label for="sort-desc" class="menu-label">От дорогих к дешевым</label>
+                            </div>
+                            <button type="submit" class="menu-submit">Применить</button>
+                        </form>
+                    </div>
+                </div>
                 <a class="active" href="{% url "zydex:index" %}">Главное</a>
                 <div class="dropdown">
                     <a href="#" class="dropdown-toggle">Категории</a>
@@ -100,6 +130,11 @@
             slides[cu].style.opacity = 1;
         }
         setInterval(c, s)
+
+        function toggleFilter() {
+            const filterForm = document.querySelector('.filter-form');
+            filterForm.classList.toggle('open');
+        }
     </script>
 </body>
 </html>

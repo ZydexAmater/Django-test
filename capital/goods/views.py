@@ -1,32 +1,47 @@
-from django.shortcuts import render # type: ignore
+from django.http import Http404
+from django.shortcuts import get_list_or_404, render
 from django.core.paginator import Paginator
 
 from goods.models import Products
 
 
-def catalog(requests, category_slug):
-    page = requests.GET.get('page', 1)
+def catalog(request, category_slug=None):
+    page = request.GET.get('page', 1)
+    on_sale = request.GET.get('on_sale')
+    order_by = request.GET.get('order_by')
+
+    try:
+        if category_slug == 'all':
+            goods = Products.objects.all()
+        else:
+            goods = Products.objects.filter(category__slug=category_slug)
+            if not goods.exists():
+                raise Http404()
+
+        if on_sale:
+            goods = goods.filter(discount__gt=0)
+
+        if order_by and order_by != 'default':
+            goods = goods.order_by(order_by)
+
+        paginator = Paginator(goods, 3)
+        current_page = paginator.page(int(page))
+
+        context = {
+            'goods': current_page,
+            'slug_url': category_slug,
+        }
+        return render(request, 'goods/catalog.html', context)
     
-    if category_slug == 'all':
-        goods = Products.objects.all()
-    else:
-        goods = Products.objects.filter(category__slug=category_slug)
+    except Products.DoesNotExist:
+        raise Http404("Category does not exist")
 
-    paginator = Paginator(goods, 3)
-    current_page = paginator.page(int(page))
+def cart(request):
+    return render(request, 'goods/cart.html')
 
-    context = {
-        'goods': current_page,
-        'slug_url': category_slug,
-    }
-    return render(requests, 'goods/catalog.html', context)
-
-def cart(requests):
-    return render(requests, 'goods/cart.html')
-
-def product(requests, product_slug):
+def product(request, product_slug):
     product = Products.objects.get(slug=product_slug)
     context = {
         'product': product,
     }
-    return render(requests, 'goods/product.html', context)
+    return render(request, 'goods/product.html', context)

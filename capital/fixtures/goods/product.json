@@ -1,86 +1,86 @@
 [
-    {
-        "model": "goods.products",
-        "pk": 1,
-        "fields": {
-            "name": "RX 7900 XTX",
-            "slug": "rx-7900-xtx",
-            "image": "images/7900xtx.png",
-            "description": "The ASRock AMD Radeon RX 7900 XTX Taichi OC is a flagship graphics card built for enthusiasts who demand top-tier performance. Equipped with an incredible 24 GB of GDDR6 memory and a 384-bit memory interface, it delivers seamless gaming experiences at 4K resolution and beyond. The card supports PCI-E 4.0, ensuring maximum bandwidth for modern processors and motherboards. With advanced cooling solutions and a striking design, it stays cool even under heavy loads. Whether you're a gamer, content creator, or professional, this GPU offers unparalleled power for demanding tasks, including high-end gaming, streaming, and 3D rendering. Its innovative technologies and cutting-edge performance set a new standard for high-performance graphics cards.",
-            "quantity": 22,
-            "discount": "0.03",
-            "price": "822300.00",
-            "category": 1
-        }
-    },
-    {
-        "model": "goods.products",
-        "pk": 5,
-        "fields": {
-            "name": "GTX 1070",
-            "slug": "gtx-1070",
-            "image": "images/gtx1070.png",
-            "description": "The NVIDIA GTX 1070 is a classic yet powerful graphics card designed for gamers who value performance and affordability. With 8 GB of GDDR5 memory and a 256-bit interface, this GPU is capable of delivering smooth frame rates in popular games at 1080p and even 1440p resolutions. Its Pascal architecture ensures energy efficiency while maintaining excellent performance. Ideal for competitive gaming and light video editing, the GTX 1070 continues to be a reliable choice for gamers who don't need cutting-edge hardware but still want to enjoy immersive gameplay.",
-            "quantity": 15,
-            "discount": "0.05",
-            "price": "150000.00",
-            "category": 2
-        }
-    },
-    {
-        "model": "goods.products",
-        "pk": 6,
-        "fields": {
-            "name": "GTX 1080",
-            "slug": "gtx-1080",
-            "image": "images/gtx1080.png",
-            "description": "The NVIDIA GTX 1080 is a high-performance graphics card tailored for gamers and creators seeking a premium experience. Featuring 8 GB of GDDR5X memory and a 256-bit memory interface, this GPU excels in gaming at 1440p and even 4K resolutions. With its Pascal architecture and innovative cooling design, it delivers excellent energy efficiency and thermal performance. Perfect for VR gaming, streaming, and video editing, the GTX 1080 remains a strong contender for those looking to build or upgrade a gaming PC without compromising on performance.",
-            "quantity": 12,
-            "discount": "0.07",
-            "price": "200000.00",
-            "category": 2
-        }
-    },
-    {
-        "model": "goods.products",
-        "pk": 7,
-        "fields": {
-            "name": "RTX 4060",
-            "slug": "rtx-4060",
-            "image": "images/rtx4060.png",
-            "description": "The NVIDIA RTX 4060 is a next-generation graphics card that offers exceptional value and performance. Equipped with 8 GB of GDDR6 memory and a 128-bit memory interface, it’s designed for high-quality gaming at 1080p and smooth experiences in ray-traced games. The RTX 4060 features NVIDIA's latest DLSS 3.0 technology, which enhances frame rates and overall visual fidelity. This card is perfect for gamers who want modern performance and efficiency without breaking the bank.",
-            "quantity": 20,
-            "discount": "0.10",
-            "price": "300000.00",
-            "category": 2
-        }
-    },
-    {
-        "model": "goods.products",
-        "pk": 8,
-        "fields": {
-            "name": "RTX 4060 Ti",
-            "slug": "rtx-4060-ti",
-            "image": "images/rtx4060ti.png",
-            "description": "The NVIDIA RTX 4060 Ti is an advanced mid-tier GPU that combines power, efficiency, and affordability. With 8 GB of GDDR6 memory and support for DLSS 3.0, it enables smooth gameplay at 1440p resolution and excellent ray-tracing performance. The card’s energy efficiency and advanced cooling make it a great choice for gamers and creators alike, ensuring consistent performance during intensive tasks like streaming, video editing, or playing AAA titles.",
-            "quantity": 18,
-            "discount": "0.08",
-            "price": "350000.00",
-            "category": 2
-        }
-    },
-    {
-        "model": "goods.products",
-        "pk": 9,
-        "fields": {
-            "name": "RTX 4070",
-            "slug": "rtx-4070",
-            "image": "images/rtx4070.png",
-            "description": "The NVIDIA RTX 4070 is a high-performance GPU designed for demanding gamers and creators. With 12 GB of GDDR6 memory and a 192-bit memory interface, it delivers excellent performance for gaming at 1440p and 4K resolutions. The RTX 4070 includes cutting-edge features like DLSS 3.0 and real-time ray tracing, making it perfect for AAA gaming, 3D rendering, and content creation. Its efficient cooling system ensures reliable performance even under heavy workloads, while its sleek design fits seamlessly into modern PC builds.",
-            "quantity": 25,
-            "discount": "0.15",
-            "price": "450000.00",
-            "category": 2
-        }
+  {
+    "model": "goods.products",
+    "pk": 1,
+    "fields": {
+      "name": "RX 7900 XTX",
+      "slug": "rx-7900-xtx",
+      "image": "products/4070_yAQmRUu.png",
+      "description": "The ASRock AMD Radeon RX 7900 XTX Taichi OC is a flagship graphics card built for enthusiasts who demand top-tier performance. Equipped with an incredible 24 GB of GDDR6 memory and a 384-bit memory interface, it delivers seamless gaming experiences at 4K resolution and beyond. The card supports PCI-E 4.0, ensuring maximum bandwidth for modern processors and motherboards. With advanced cooling solutions and a striking design, it stays cool even under heavy loads. Whether you're a gamer, content creator, or professional, this GPU offers unparalleled power for demanding tasks, including high-end gaming, streaming, and 3D rendering. Its innovative technologies and cutting-edge performance set a new standard for high-performance graphics cards.",
+      "quantity": 22,
+      "discount": "0.03",
+      "price": "822300.00",
+      "category": 1
     }
+  },
+  {
+    "model": "goods.products",
+    "pk": 5,
+    "fields": {
+      "name": "GTX 1070",
+      "slug": "gtx-1070",
+      "image": "products/4070_T5cWMsp.png",
+      "description": "The NVIDIA GTX 1070 is a classic yet powerful graphics card designed for gamers who value performance and affordability. With 8 GB of GDDR5 memory and a 256-bit interface, this GPU is capable of delivering smooth frame rates in popular games at 1080p and even 1440p resolutions. Its Pascal architecture ensures energy efficiency while maintaining excellent performance. Ideal for competitive gaming and light video editing, the GTX 1070 continues to be a reliable choice for gamers who don't need cutting-edge hardware but still want to enjoy immersive gameplay.",
+      "quantity": 15,
+      "discount": "0.05",
+      "price": "150000.00",
+      "category": 2
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 6,
+    "fields": {
+      "name": "GTX 1080",
+      "slug": "gtx-1080",
+      "image": "products/4070_EwQvOV3.png",
+      "description": "The NVIDIA GTX 1080 is a high-performance graphics card tailored for gamers and creators seeking a premium experience. Featuring 8 GB of GDDR5X memory and a 256-bit memory interface, this GPU excels in gaming at 1440p and even 4K resolutions. With its Pascal architecture and innovative cooling design, it delivers excellent energy efficiency and thermal performance. Perfect for VR gaming, streaming, and video editing, the GTX 1080 remains a strong contender for those looking to build or upgrade a gaming PC without compromising on performance.",
+      "quantity": 12,
+      "discount": "0.07",
+      "price": "200000.00",
+      "category": 2
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 7,
+    "fields": {
+      "name": "RTX 4060",
+      "slug": "rtx-4060",
+      "image": "products/4070_7uPNgT6.png",
+      "description": "The NVIDIA RTX 4060 is a next-generation graphics card that offers exceptional value and performance. Equipped with 8 GB of GDDR6 memory and a 128-bit memory interface, itТs designed for high-quality gaming at 1080p and smooth experiences in ray-traced games. The RTX 4060 features NVIDIA's latest DLSS 3.0 technology, which enhances frame rates and overall visual fidelity. This card is perfect for gamers who want modern performance and efficiency without breaking the bank.",
+      "quantity": 20,
+      "discount": "0.10",
+      "price": "300000.00",
+      "category": 2
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 8,
+    "fields": {
+      "name": "RTX 4060 Ti",
+      "slug": "rtx-4060-ti",
+      "image": "products/4070_cLV44PK.png",
+      "description": "The NVIDIA RTX 4060 Ti is an advanced mid-tier GPU that combines power, efficiency, and affordability. With 8 GB of GDDR6 memory and support for DLSS 3.0, it enables smooth gameplay at 1440p resolution and excellent ray-tracing performance. The cardТs energy efficiency and advanced cooling make it a great choice for gamers and creators alike, ensuring consistent performance during intensive tasks like streaming, video editing, or playing AAA titles.",
+      "quantity": 18,
+      "discount": "0.08",
+      "price": "350000.00",
+      "category": 2
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 9,
+    "fields": {
+      "name": "RTX 4070",
+      "slug": "rtx-4070",
+      "image": "products/4070.png",
+      "description": "The NVIDIA RTX 4070 is a high-performance GPU designed for demanding gamers and creators. With 12 GB of GDDR6 memory and a 192-bit memory interface, it delivers excellent performance for gaming at 1440p and 4K resolutions. The RTX 4070 includes cutting-edge features like DLSS 3.0 and real-time ray tracing, making it perfect for AAA gaming, 3D rendering, and content creation. Its efficient cooling system ensures reliable performance even under heavy workloads, while its sleek design fits seamlessly into modern PC builds.",
+      "quantity": 25,
+      "discount": "0.15",
+      "price": "450000.00",
+      "category": 2
+    }
+  }
 ]
